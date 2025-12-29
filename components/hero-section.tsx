@@ -27,7 +27,7 @@ export function HeroSection() {
         <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-transparent to-black/40"></div>
       </div>
 
-      <div className="absolute right-[5%] top-[70%] -translate-y-1/2 opacity-50 z-[2] w-[30%] max-w-[400px] animate-mascot-float">
+      <div className="absolute right-[2%] sm:right-[5%] top-[75%] sm:top-[70%] -translate-y-1/2 opacity-30 sm:opacity-40 md:opacity-50 z-[2] w-[35%] sm:w-[30%] max-w-[400px] animate-mascot-float">
         <Image
           src="/astromuni-mascot.png"
           alt="AstroMuni Sage"
@@ -38,24 +38,24 @@ export function HeroSection() {
         />
       </div>
 
-      <div className="container mx-auto px-8 relative z-20 max-w-7xl pt-32 pb-32">
-        <div className="max-w-2xl space-y-10">
-          <h1 className="text-6xl md:text-7xl lg:text-8xl font-medium text-balance leading-[1.1] text-white">
+      <div className="container mx-auto px-4 sm:px-6 md:px-8 relative z-20 max-w-7xl pt-24 sm:pt-28 md:pt-32 pb-20 sm:pb-24 md:pb-32">
+        <div className="max-w-2xl space-y-6 sm:space-y-8 md:space-y-10">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-medium text-balance leading-[1.1] text-white">
             Clarity, not confusion.
             <br />
             Guidance, not guesswork.
           </h1>
-          <p className="text-xl md:text-2xl text-white/80 text-pretty leading-relaxed font-light">
+          <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-white/80 text-pretty leading-relaxed font-light">
             AstroMuni delivers precise, predictive, and empowering life guidance through WhatsApp by combining the
             ancient wisdom of Vedic astrology with the precision of KP (Krishnamurti Paddhati) system — so you don't
             just understand <span className="font-medium text-white italic">what</span>, you know{" "}
             <span className="font-medium text-white italic">when</span>.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 pt-2">
+          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 pt-2">
             <Button
               asChild
               size="lg"
-              className="relative z-30 bg-gradient-to-r from-amber-500 to-orange-600 text-white hover:from-amber-600 hover:to-orange-700 hover:shadow-2xl hover:-translate-y-1.5 transition-all duration-300 text-base px-10 py-6 rounded-full font-medium shadow-xl"
+              className="relative z-30 bg-gradient-to-r from-amber-500 to-orange-600 text-white hover:from-amber-600 hover:to-orange-700 hover:shadow-2xl hover:-translate-y-1.5 transition-all duration-300 text-sm sm:text-base px-8 sm:px-10 py-5 sm:py-6 rounded-full font-medium shadow-xl"
             >
               <a href="https://wa.me/916361505946" target="_blank" rel="noopener noreferrer">
                 Connect to AstroMuni
@@ -65,15 +65,15 @@ export function HeroSection() {
         </div>
       </div>
 
-      <div className="absolute bottom-16 left-0 right-0 z-10">
-        <div className="container mx-auto px-8 max-w-7xl">
-          <div className="flex flex-col items-center gap-4 text-center">
-            <p className="text-base text-white/70 font-light tracking-wide">
+      <div className="absolute bottom-8 sm:bottom-12 md:bottom-16 left-0 right-0 z-10">
+        <div className="container mx-auto px-4 sm:px-6 md:px-8 max-w-7xl">
+          <div className="flex flex-col items-center gap-2 sm:gap-3 md:gap-4 text-center">
+            <p className="text-xs sm:text-sm md:text-base text-white/70 font-light tracking-wide">
               Trusted by thousands seeking a clearer path.
             </p>
-            <div className="flex items-center gap-2">
-              <span className="text-2xl text-amber-400">★★★★★</span>
-              <span className="text-sm text-white/60 ml-2 font-light">4.8 average user rating</span>
+            <div className="flex items-center gap-1 sm:gap-2">
+              <span className="text-lg sm:text-xl md:text-2xl text-amber-400">★★★★★</span>
+              <span className="text-xs sm:text-sm text-white/60 ml-1 sm:ml-2 font-light">4.8 average user rating</span>
             </div>
             <p className="text-xs text-white/40 font-light mt-1">
               Used across career, relationships, business, and life decisions

@@ -114,48 +114,48 @@ export function TestimonialsSection() {
   const visibleTestimonials = testimonials.slice(currentIndex, currentIndex + testimonialsPerPage)
 
   return (
-    <section id="testimonials" className="py-32 bg-background">
-      <div className="container mx-auto px-8 max-w-7xl">
-        <div className="text-center mb-16">
-          <h2 className="text-5xl md:text-6xl font-medium mb-6 tracking-tight text-foreground leading-[1.15]">
+    <section id="testimonials" className="py-16 sm:py-24 md:py-32 bg-background">
+      <div className="container mx-auto px-4 sm:px-6 md:px-8 max-w-7xl">
+        <div className="text-center mb-8 sm:mb-12 md:mb-16">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-medium mb-4 sm:mb-6 tracking-tight text-foreground leading-[1.15]">
             Real guidance. Real impact.
           </h2>
         </div>
 
         <div className="relative">
-          <div className="grid md:grid-cols-3 gap-8 mb-12">
+          <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6 md:gap-8 mb-8 sm:mb-10 md:mb-12">
             {visibleTestimonials.map((testimonial, index) => (
               <Card
                 key={currentIndex + index}
-                className="p-10 bg-card border border-border/40 hover:border-primary/30 hover:shadow-2xl transition-all duration-500 hover:-translate-y-1 rounded-3xl"
+                className="p-6 sm:p-8 md:p-10 bg-card border border-border/40 hover:border-primary/30 hover:shadow-2xl transition-all duration-500 hover:-translate-y-1 rounded-2xl sm:rounded-3xl"
               >
-                <div className="flex items-center gap-4 mb-6">
-                  <Avatar className="w-12 h-12">
-                    <AvatarFallback className="bg-primary/10 text-primary font-medium text-base border border-primary/20">
+                <div className="flex items-center gap-3 sm:gap-4 mb-4 sm:mb-6">
+                  <Avatar className="w-10 h-10 sm:w-12 sm:h-12">
+                    <AvatarFallback className="bg-primary/10 text-primary font-medium text-sm sm:text-base border border-primary/20">
                       {testimonial.initials}
                     </AvatarFallback>
                   </Avatar>
                   <div>
-                    <div className="font-medium text-foreground text-base">{testimonial.name}</div>
+                    <div className="font-medium text-foreground text-sm sm:text-base">{testimonial.name}</div>
                     <div className="text-sm text-muted-foreground font-light">
                       {testimonial.role || testimonial.location}
                     </div>
                   </div>
                 </div>
-                <p className="text-base text-muted-foreground leading-relaxed font-light italic">
+                <p className="text-sm sm:text-base text-muted-foreground leading-relaxed font-light italic">
                   "{testimonial.content}"
                 </p>
               </Card>
             ))}
           </div>
 
-          <div className="flex items-center justify-center gap-6">
+          <div className="flex items-center justify-center gap-4 sm:gap-6">
             <button
               onClick={prevSlide}
-              className="p-3 rounded-full border border-primary/30 bg-card hover:bg-primary/10 hover:border-primary/50 transition-all duration-300 text-primary"
+              className="p-2 sm:p-3 rounded-full border border-primary/30 bg-card hover:bg-primary/10 hover:border-primary/50 transition-all duration-300 text-primary"
               aria-label="Previous testimonials"
             >
-              <ChevronLeft className="w-6 h-6" />
+              <ChevronLeft className="w-5 h-5 sm:w-6 sm:h-6" />
             </button>
             <div className="flex gap-2">
               {Array.from({ length: Math.ceil(testimonials.length / testimonialsPerPage) }).map((_, idx) => (
@@ -173,10 +173,10 @@ export function TestimonialsSection() {
             </div>
             <button
               onClick={nextSlide}
-              className="p-3 rounded-full border border-primary/30 bg-card hover:bg-primary/10 hover:border-primary/50 transition-all duration-300 text-primary"
+              className="p-2 sm:p-3 rounded-full border border-primary/30 bg-card hover:bg-primary/10 hover:border-primary/50 transition-all duration-300 text-primary"
               aria-label="Next testimonials"
             >
-              <ChevronRight className="w-6 h-6" />
+              <ChevronRight className="w-5 h-5 sm:w-6 sm:h-6" />
             </button>
           </div>
         </div>

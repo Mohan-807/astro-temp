@@ -121,36 +121,36 @@ export function BlogSection() {
   const visiblePosts = blogPosts.slice(currentIndex, currentIndex + itemsPerPage)
 
   return (
-    <section id="blog" className="py-40 bg-background relative overflow-hidden">
+    <section id="blog" className="py-16 sm:py-24 md:py-32 lg:py-40 bg-background relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-teal-950/10 to-transparent pointer-events-none" />
-      <div className="container mx-auto px-8 max-w-7xl relative z-10">
-        <div className="text-center mb-20">
-          <h2 className="text-6xl md:text-7xl font-medium mb-6 tracking-tight text-foreground">The Muni Mind</h2>
-          <p className="text-xl text-muted-foreground font-light">Insights on life, wisdom, and technology</p>
-          <p className="text-lg text-muted-foreground/70 font-light mt-4">
+      <div className="container mx-auto px-4 sm:px-6 md:px-8 max-w-7xl relative z-10">
+        <div className="text-center mb-10 sm:mb-16 md:mb-20">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-medium mb-4 sm:mb-6 tracking-tight text-foreground">The Muni Mind</h2>
+          <p className="text-base sm:text-lg md:text-xl text-muted-foreground font-light">Insights on life, wisdom, and technology</p>
+          <p className="text-sm sm:text-base md:text-lg text-muted-foreground/70 font-light mt-3 sm:mt-4">
             Explore articles that educate, empower, and demystify astrology — without superstition or fear.
           </p>
         </div>
 
         <div className="relative">
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mb-8 sm:mb-10 md:mb-12">
             {visiblePosts.map((post, index) => (
               <Card
                 key={currentIndex + index}
-                className="overflow-hidden border border-border/40 hover:border-primary/30 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 rounded-3xl"
+                className="overflow-hidden border border-border/40 hover:border-primary/30 hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 rounded-2xl sm:rounded-3xl"
               >
                 <div className="aspect-[4/3] relative overflow-hidden">
                   <img src={post.image || "/placeholder.svg"} alt={post.title} className="w-full h-full object-cover" />
                 </div>
-                <div className="p-8">
-                  <div className="flex items-center justify-between mb-4">
+                <div className="p-6 sm:p-8">
+                  <div className="flex items-center justify-between mb-3 sm:mb-4">
                     <div className="text-sm text-primary font-medium uppercase tracking-wide">{post.category}</div>
                     <div className="text-xs text-muted-foreground/60">{post.readTime}</div>
                   </div>
-                  <h3 className="text-xl font-medium mb-3 text-balance leading-tight text-foreground tracking-tight">
+                  <h3 className="text-lg sm:text-xl font-medium mb-2 sm:mb-3 text-balance leading-tight text-foreground tracking-tight">
                     {post.title}
                   </h3>
-                  <p className="text-sm text-muted-foreground mb-6 font-light leading-relaxed">{post.description}</p>
+                  <p className="text-xs sm:text-sm text-muted-foreground mb-4 sm:mb-6 font-light leading-relaxed">{post.description}</p>
                   <Button
                     variant="outline"
                     className="w-full border-border/60 text-foreground hover:bg-secondary/50 hover:border-primary/30 rounded-full font-normal bg-transparent transition-all duration-300"
@@ -162,14 +162,14 @@ export function BlogSection() {
             ))}
           </div>
 
-          <div className="flex items-center justify-center gap-6">
+          <div className="flex items-center justify-center gap-4 sm:gap-6">
             <Button
               onClick={prevSlide}
               variant="outline"
               size="icon"
-              className="rounded-full w-12 h-12 border-border/60 hover:border-primary/50 hover:bg-secondary/50 transition-all duration-300 bg-transparent"
+              className="rounded-full w-10 h-10 sm:w-12 sm:h-12 border-border/60 hover:border-primary/50 hover:bg-secondary/50 transition-all duration-300 bg-transparent"
             >
-              <ChevronLeft className="h-6 w-6" />
+              <ChevronLeft className="h-5 w-5 sm:h-6 sm:w-6" />
             </Button>
 
             <div className="flex gap-2">
@@ -191,9 +191,9 @@ export function BlogSection() {
               onClick={nextSlide}
               variant="outline"
               size="icon"
-              className="rounded-full w-12 h-12 border-border/60 hover:border-primary/50 hover:bg-secondary/50 transition-all duration-300 bg-transparent"
+              className="rounded-full w-10 h-10 sm:w-12 sm:h-12 border-border/60 hover:border-primary/50 hover:bg-secondary/50 transition-all duration-300 bg-transparent"
             >
-              <ChevronRight className="h-6 w-6" />
+              <ChevronRight className="h-5 w-5 sm:h-6 sm:w-6" />
             </Button>
           </div>
         </div>
